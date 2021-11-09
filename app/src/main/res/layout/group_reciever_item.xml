@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="12.12.2020"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/black"
+        android:id="@+id/day"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/text"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+           app:layout_constraintWidth_percent="0.7"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        app:layout_constraintTop_toBottomOf="@id/day"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+       >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/text"
+            android:id="@+id/usimage"
+            android:src="@drawable/ic_man__1_"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#462F6E"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/m"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:maxWidth="200dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/backsendfromitem"
+            app:layout_constraintLeft_toRightOf="@id/usimage"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintVertical_bias="0"
+                app:layout_constraintHorizontal_bias="0"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textStyle="bold"
+                android:text="Sevara"
+                android:textColor="@color/black"
+                android:id="@+id/usname"/>
+            <TextView
+                android:id="@+id/messagetext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:paddingLeft="10dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="10dp"
+
+                app:layout_constraintTop_toBottomOf="@id/usname"
+                 app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:maxWidth="200dp"
+                android:text="@string/aaa"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:14"
+            android:textColor="#302D2D"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/m"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/m"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/audio"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/day"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+         <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/n"
+            android:id="@+id/usimageaudio"
+            android:src="@drawable/ic_man__1_"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#462F6E"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintWidth_percent="0.56"
+            android:id="@+id/n"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:maxWidth="200dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/backsendfromitem"
+            app:layout_constraintLeft_toRightOf="@id/usimageaudio"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:text="Sevara"
+                android:textColor="@color/black"
+                android:id="@+id/usnameaudio"/>
+            <me.jagar.chatvoiceplayerlibrary.VoicePlayerView
+                android:id="@+id/voicePlayerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_percent="0.6"
+
+                app:enableVisualizer="true"
+                app:visualizationPlayedColor="#ff7700"
+                app:visualizationNotPlayedColor="#727171"
+                app:playPauseBackgroundColor="#ff7700"
+
+                app:timingBackgroundColor="#6AFF7700"
+                app:seekBarProgressColor="@color/white"
+
+                app:showShareButton="false"
+                app:playPauseCornerRadius="100"
+                app:showTiming="true"
+                app:viewCornerRadius="100"
+                app:viewBackground="@android:color/transparent"
+                app:progressTimeColor="#000"
+                app:seekBarThumbColor="@color/white"
+                app:playProgressbarColor="@color/white"
+
+                app:layout_constraintTop_toBottomOf="@id/usnameaudio"
+                app:layout_constraintLeft_toLeftOf="parent"
+
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/dateaudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:11"
+            android:textColor="#302D2D"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/n"
+
+            app:layout_constraintStart_toEndOf="@id/n"
+           />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/image"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/day"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/s"
+            android:id="@+id/usimageimage"
+            android:src="@drawable/ic_man__1_"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#462F6E"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/s"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:maxWidth="200dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/backsendfromitem"
+            app:layout_constraintLeft_toRightOf="@id/usimageimage"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:text="Sevara"
+                android:textColor="@color/black"
+                android:id="@+id/usnameimage"/>
+
+            <ImageView
+                android:id="@+id/placeholder"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/usnameimage" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <TextView
+            android:id="@+id/dateimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:11"
+            android:textColor="#302D2D"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/s"
+
+            app:layout_constraintStart_toEndOf="@id/s"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

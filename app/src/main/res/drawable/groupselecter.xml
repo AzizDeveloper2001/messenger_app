@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_vector__27_" android:state_checked="true" />
+    <item android:drawable="@drawable/group_off" android:state_checked="false" />
+
+</selector>

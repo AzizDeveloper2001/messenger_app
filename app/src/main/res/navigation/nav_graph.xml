@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/chatContactsFragment">
+
+    <fragment
+        android:id="@+id/chatContactsFragment"
+        android:name="uz.pdp.messanger.fragments.menuFragments.ChatContactsFragment"
+        android:label="fragment_chat_contacts"
+        tools:layout="@layout/fragment_chat_contacts"
+        app:launchSingleTop="true"
+        app:popUpTo="@+id/nav_graph"
+        app:popUpToInclusive="true"/>
+    <fragment
+        android:id="@+id/groupFragment"
+        android:name="uz.pdp.messanger.fragments.menuFragments.GroupFragment"
+        android:label="fragment_group"
+        tools:layout="@layout/fragment_group"
+        app:launchSingleTop="true"
+        app:popUpTo="@+id/nav_graph"
+        app:popUpToInclusive="true">
+        <action
+            android:id="@+id/action_groupFragment_to_groupMessageFragment"
+            app:destination="@id/groupMessageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chennelFragment"
+        android:name="uz.pdp.messanger.fragments.menuFragments.ChennelFragment"
+        android:label="fragment_chennel"
+        tools:layout="@layout/fragment_chennel"
+        app:launchSingleTop="true"
+        app:popUpTo="@+id/nav_graph"
+        app:popUpToInclusive="true"/>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="uz.pdp.messanger.fragments.menuFragments.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu"
+        app:launchSingleTop="true"
+        app:popUpTo="@+id/nav_graph"
+        app:popUpToInclusive="true">
+        <action
+            android:id="@+id/action_menuFragment_to_createGroupFragment"
+            app:destination="@id/createGroupFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_createChennelFragment"
+            app:destination="@id/createChennelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatMessageFragment"
+        android:name="uz.pdp.messanger.fragments.menuFragments.ChatMessageFragment"
+        android:label="fragment_chat_message"
+        tools:layout="@layout/fragment_chat_message" />
+    <fragment
+        android:id="@+id/createGroupFragment"
+        android:name="uz.pdp.messanger.fragments.menuFragments.CreateGroupFragment"
+        android:label="fragment_create_group"
+        tools:layout="@layout/fragment_create_group" >
+        <action
+            android:id="@+id/action_createGroupFragment_to_createContactFragment"
+            app:destination="@id/createContactFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createChennelFragment"
+        android:name="uz.pdp.messanger.fragments.menuFragments.CreateChennelFragment"
+        android:label="fragment_create_chennel"
+        tools:layout="@layout/fragment_create_chennel" />
+    <fragment
+        android:id="@+id/createContactFragment"
+        android:name="uz.pdp.messanger.fragments.menuFragments.CreateContactFragment"
+        android:label="fragment_create_contact"
+        tools:layout="@layout/fragment_create_contact" />
+    <fragment
+        android:id="@+id/groupMessageFragment"
+        android:name="uz.pdp.messanger.fragments.menuFragments.GroupMessageFragment"
+        android:label="fragment_group_message"
+        tools:layout="@layout/fragment_group_message" />
+    <fragment
+        android:id="@+id/chennelMessagesFragment"
+        android:name="uz.pdp.messanger.fragments.menuFragments.ChennelMessagesFragment"
+        android:label="fragment_chennel_messages"
+        tools:layout="@layout/fragment_chennel_messages" />
+    <fragment
+        android:id="@+id/callsFragment"
+        android:name="uz.pdp.messanger.fragments.CallsFragment"
+        android:label="fragment_calls"
+        tools:layout="@layout/fragment_calls" />
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="uz.pdp.messanger.fragments.ContactsFragment"
+        android:label="fragment_contacts"
+        tools:layout="@layout/fragment_contacts" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="uz.pdp.messanger.fragments.menuFragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

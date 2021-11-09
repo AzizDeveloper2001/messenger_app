@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileimage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/back_lastmessage"
+        app:civ_border_color="@color/teal_700"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/on_off"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/onlineback"
+        app:layout_constraintBottom_toBottomOf="@id/profileimage"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintLeft_toLeftOf="@id/profileimage"
+        app:layout_constraintRight_toRightOf="@id/profileimage"
+        app:layout_constraintTop_toTopOf="@id/profileimage"
+        app:layout_constraintVertical_bias="0.95" />
+
+    <LinearLayout
+        android:id="@+id/lay"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/profileimage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Dianne Russell"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lasttext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+
+            android:textColor="#3C3939"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toRightOf="@id/lay"
+        app:layout_constraintRight_toRightOf="parent"
+        android:gravity="right"
+
+
+        android:id="@+id/sana"
+        android:textSize="14sp"/>
+    <TextView
+        android:id="@+id/count"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/sana"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="3"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:background="@drawable/back_lastmessage"/>
+    <ImageView
+        android:id="@+id/checked"
+        android:gravity="center"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/sana"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/ic_baseline_check_24"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

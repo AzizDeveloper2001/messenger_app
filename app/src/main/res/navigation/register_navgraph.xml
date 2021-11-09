@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register_navgraph"
+    app:startDestination="@id/authenticationFragment">
+
+    <fragment
+        android:id="@+id/authenticationFragment"
+        android:name="uz.pdp.messanger.fragments.AuthenticationFragment"
+        android:label="fragment_authentication"
+        tools:layout="@layout/fragment_authentication" >
+        <action
+            android:id="@+id/action_authenticationFragment_to_smsRecievFragment"
+            app:destination="@id/smsRecievFragment" />
+        <action
+            android:id="@+id/action_authenticationFragment_to_googleSignInFragment"
+            app:destination="@id/googleSignInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/smsRecievFragment"
+        android:name="uz.pdp.messanger.fragments.SmsRecievFragment"
+        android:label="fragment_sms_reciev"
+        tools:layout="@layout/fragment_sms_reciev" >
+        <action
+            android:id="@+id/action_smsRecievFragment_to_createAccountFragment"
+            app:destination="@id/createAccountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAccountFragment"
+        android:name="uz.pdp.messanger.fragments.CreateAccountFragment"
+        android:label="fragment_create_account"
+        tools:layout="@layout/fragment_create_account" />
+    <fragment
+        android:id="@+id/googleSignInFragment"
+        android:name="uz.pdp.messanger.fragments.GoogleSignInFragment"
+        android:label="fragment_google_sign_in"
+        tools:layout="@layout/fragment_google_sign_in" >
+        <action
+            android:id="@+id/action_googleSignInFragment_to_createAccountFragment"
+            app:destination="@id/createAccountFragment" />
+    </fragment>
+</navigation>

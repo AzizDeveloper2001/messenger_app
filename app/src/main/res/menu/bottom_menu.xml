@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/chatContactsFragment"
+    android:title="Chatlar"
+    android:icon="@drawable/chatsselector"/>
+    <item android:id="@+id/groupFragment"
+        android:title="Guruhlar"
+        android:icon="@drawable/groupselecter"/>
+    <item android:id="@+id/chennelFragment"
+        android:title="Kanallar"
+        android:icon="@drawable/chennelselector"/>
+    <item android:id="@+id/menuFragment"
+        android:title="Menu"
+        android:icon="@drawable/menuselecter"/>
+
+</menu>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.SmsRecievFragment">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_group_127"
+        android:id="@+id/image"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SMS Kodni tasdiqlang"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:id="@+id/register"/>
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintWidth_percent="0.7"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/register"
+        android:layout_margin="15dp"
+        android:text="SMS +998 93 123 77 77 raqamiga jo’natildi"
+        android:visibility="invisible"
+        android:textColor="@color/black"
+        android:textSize="15sp"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@id/time"
+        app:layout_constraintTop_toTopOf="@id/tv"
+        app:layout_constraintBottom_toBottomOf="@id/tv"
+        app:layout_constraintLeft_toRightOf="@id/tv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth_percent="0.2"
+        android:layout_marginRight="10dp"
+        android:text="00:59"
+        android:visibility="invisible"
+        android:gravity="end"
+        android:textColor="@color/black"
+        android:textSize="15sp"/>
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="15dp"
+
+
+        android:textSize="20dp"
+        android:background="@drawable/textlines"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintTop_toBottomOf="@id/phone"
+        android:text="Keyingi"
+        android:textAllCaps="false"
+        android:backgroundTint="#5B61B9"
+        android:padding="5dp"
+        android:id="@+id/next"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SMS qayta jo’natish"
+        app:layout_constraintTop_toBottomOf="@id/next"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="15dp"
+        android:textColor="@color/black"
+        android:id="@+id/sendagain"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

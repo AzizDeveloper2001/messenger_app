@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "970137482409",
+    "project_id": "messenger-747eb",
+    "storage_bucket": "messenger-747eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970137482409:android:88b263da84180a382025b8",
+        "android_client_info": {
+          "package_name": "uz.pdp.messanger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "970137482409-krl6ge88qc8tee4bouepbj142f4ij877.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmG-jh2Vnqknc9vaB1crB-1GbzH8Mqmfw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "970137482409-krl6ge88qc8tee4bouepbj142f4ij877.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
